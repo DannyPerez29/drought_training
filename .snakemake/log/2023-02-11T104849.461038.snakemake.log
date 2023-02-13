@@ -1,0 +1,6 @@
+Building DAG of jobs...
+MissingInputException in rule get_station_data in file C:\Users\ra93zoz\Documents\drought_training\Snakefile, line 44:
+Missing input files for rule get_station_data:
+    output: results/data/raw/ghcnd-stations.txt
+    affected files:
+        scripts/get_ghcn_data.bash

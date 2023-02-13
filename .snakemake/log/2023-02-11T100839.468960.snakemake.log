@@ -1,0 +1,37 @@
+Building DAG of jobs...
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                  count    min threads    max threads
+-----------------  -------  -------------  -------------
+get_all_archive          1              1              1
+get_all_filenames        1              1              1
+get_inventory            1              1              1
+get_station_data         1              1              1
+targets                  1              1              1
+total                    5              1              1
+
+Select jobs to execute...
+
+[Sat Feb 11 10:08:40 2023]
+rule get_inventory:
+    input: results/scripts/get_ghcn_data.bash
+    output: results/data/metadata/ghcnd-inventory.txt
+    jobid: 3
+    reason: Missing output files: results/data/metadata/ghcnd-inventory.txt
+    resources: tmpdir=C:\Users\ra93zoz\AppData\Local\Temp
+
+[Sat Feb 11 10:08:40 2023]
+Error in rule get_inventory:
+    jobid: 3
+    input: results/scripts/get_ghcn_data.bash
+    output: results/data/metadata/ghcnd-inventory.txt
+    shell:
+        
+        results/scripts/get_ghcn_data.bash ghcnd-inventory.txt
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake\log\2023-02-11T100839.468960.snakemake.log
